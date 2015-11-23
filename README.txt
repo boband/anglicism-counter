@@ -1,6 +1,8 @@
-# anglicism-counter by boband
+# GENERAL INFORMATION #
+anglicism-counter by boband
 A python script to count anglicisms in German texts.
 
+# LICENSE #
 This project is published under the MIT-License
 
 # USAGE #
