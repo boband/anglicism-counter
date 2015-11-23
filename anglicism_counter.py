@@ -76,18 +76,15 @@ while True:
         else:
             while falsepositive in anglicisms:
                 anglicisms.remove(falsepositive)
-        
-        
-    print('='*50)
-    print('Lines                 : ',lines)
-    print('Blanklines            : ',blanklines)
-    print('Sentences             : ',sentences)
-    print('Words:                : ',words)
-    print('Anglicisms            : ',len(anglicisms))
-    print('Words until anglicism : ',int(words)/len(anglicisms)-1)
-    print('All anglicisms        :\n',Counter(anglicisms))
-    print('='*50)
-
+        print('='*50)
+        print('Lines                 : ',lines)
+        print('Blanklines            : ',blanklines)
+        print('Sentences             : ',sentences)
+        print('Words:                : ',words)
+        print('Anglicisms            : ',len(anglicisms))
+        print('Words until anglicism : ',int(words)/len(anglicisms)-1)
+        print('All anglicisms        :\n',Counter(anglicisms))
+        print('='*50)
 
     if  input('Enter "y" if you want to create an output file: ') == 'y':
         results = open('results_'+setname+'.txt', 'w')
@@ -110,4 +107,3 @@ while True:
     else:
         pass
     print('='*50)
-    
