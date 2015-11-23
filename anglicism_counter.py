@@ -28,9 +28,8 @@ import os.path
 
 print('='*68)
 print(' Welcome to the ANGLICISM COUNTER by boband (see github.com/boband) ')
+print('='*68)
 while True:
-    print('='*68)
-
     lines, blanklines, sentences, words, setnum = 0,0,0,0,1
     setname = input('Please enter setname: ')
     listOfAnglicisms = open('anglicisms.txt').read().split()
@@ -110,3 +109,5 @@ while True:
         results.close()
     else:
         pass
+    print('='*50)
+    
