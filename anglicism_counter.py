@@ -27,7 +27,7 @@ from collections import Counter
 import os.path
 
 print('='*50)
-print('Welcome to the ANGLICISM COUNTER by boband')
+print('Welcome to the ANGLICISM COUNTER by boband (see github.com/boband)')
 while True:
     print('='*50)
 
