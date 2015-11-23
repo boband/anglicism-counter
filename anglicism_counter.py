@@ -26,10 +26,10 @@ SOFTWARE.
 from collections import Counter
 import os.path
 
-print('='*50)
-print('Welcome to the ANGLICISM COUNTER by boband (see github.com/boband)')
+print('='*68)
+print(' Welcome to the ANGLICISM COUNTER by boband (see github.com/boband) ')
 while True:
-    print('='*50)
+    print('='*68)
 
     lines, blanklines, sentences, words, setnum = 0,0,0,0,1
     setname = input('Please enter setname: ')
