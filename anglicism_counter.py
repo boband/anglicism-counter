@@ -31,11 +31,13 @@ print(' Welcome to the ANGLICISM COUNTER by boband (see github.com/boband) ')
 print('='*68)
 while True:
     lines, blanklines, sentences, words, setnum = 0,0,0,0,1
-    setname = input('Please enter setname: ')
     listOfAnglicisms = open('anglicisms.txt').read().split()
     listOfGermanWords = open('frequents.txt').read().split()
     anglicisms = []
     falsepositive = []
+    setname = input('Please enter setname: ')
+    while os.path.isfile(str(setname+str(setnum)+'.txt')) == False:
+        setname = input('There is no file called "'+str(setname+str(setnum)+'.txt')+'"\nPlease enter a valid setname: ')
     
     def derivatesFromAnglicism(word):
         return any([word.startswith('ge'+a) for a in listOfAnglicisms]) or any([word.startswith(a) for a in listOfAnglicisms])
