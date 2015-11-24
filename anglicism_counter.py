@@ -38,7 +38,7 @@ while True:
     falsepositive = []
     
     def derivatesFromAnglicism(word):
-        return any([word.startswith(a) for a in listOfAnglicisms])
+        return any([word.startswith('ge'+a) for a in listOfAnglicisms]) or any([word.startswith(a) for a in listOfAnglicisms])
 
     while os.path.isfile(str(setname+str(setnum)+".txt")) == True:
 
