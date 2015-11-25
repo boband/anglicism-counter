@@ -26,26 +26,47 @@ SOFTWARE.
 from collections import Counter
 import os.path
 
+#definitions
+def printResults()
+    print('='*50)
+    print('Lines                 : ',lines)
+    print('Blanklines            : ',blanklines)
+    print('Sentences             : ',sentences)
+    print('Words:                : ',words)
+    print('Anglicisms            : ',len(anglicisms))
+    print('Words until anglicism : ',int(words)/len(anglicisms)-1)
+    print('All anglicisms        :\n',Counter(anglicisms))
+    print('='*50)
+    
+def derivatesFromAnglicism(word):
+    return any([word.startswith('ge'+a) for a in listOfAnglicisms]) or any([word.startswith(a) for a in listOfAnglicisms])
+
+#welcome message
 print('='*68)
 print(' Welcome to the ANGLICISM COUNTER by boband (see github.com/boband) ')
 print('='*68)
+
+#start program in loop
 while True:
+    
+    #setting values
     lines, blanklines, sentences, words, setnum = 0,0,0,0,1
     listOfAnglicisms = open('anglicisms.txt').read().split()
     listOfGermanWords = open('frequents.txt').read().split()
     anglicisms = []
     falsepositive = []
     setname = input('Please enter setname: ')
+    
+    #checking if valid file
     while os.path.isfile(str(setname+str(setnum)+'.txt')) == False:
         setname = input('There is no file called "'+str(setname+str(setnum)+'.txt')+'"\nPlease enter a valid setname: ')
     
-    def derivatesFromAnglicism(word):
-        return any([word.startswith('ge'+a) for a in listOfAnglicisms]) or any([word.startswith(a) for a in listOfAnglicisms])
-
+    #loop until there are no files of the entered set
     while os.path.isfile(str(setname+str(setnum)+".txt")) == True:
 
         textf = open(setname+str(setnum)+'.txt')
 
+        #analyze line by line
         for line in textf:
             line = line.lower()
             lines+=1
@@ -61,16 +82,9 @@ while True:
         setnum+=1
 
     textf.close()
-    print('='*50)
-    print('Lines                 : ',lines)
-    print('Blanklines            : ',blanklines)
-    print('Sentences             : ',sentences)
-    print('Words:                : ',words)
-    print('Anglicisms            : ',len(anglicisms))
-    print('Words until anglicism : ',int(words)/len(anglicisms)-1)
-    print('All anglicisms        :\n',Counter(anglicisms))
-    print('='*50)
+    printResults()
 
+    #manually remove false positives if there are any
     while falsepositive != 'n':
         falsepositive = input('Please enter a false positive or "n" to continue: ')
         if falsepositive == 'n':
@@ -78,16 +92,9 @@ while True:
         else:
             while falsepositive in anglicisms:
                 anglicisms.remove(falsepositive)
-        print('='*50)
-        print('Lines                 : ',lines)
-        print('Blanklines            : ',blanklines)
-        print('Sentences             : ',sentences)
-        print('Words:                : ',words)
-        print('Anglicisms            : ',len(anglicisms))
-        print('Words until anglicism : ',int(words)/len(anglicisms)-1)
-        print('All anglicisms        :\n',Counter(anglicisms))
-        print('='*50)
+        printResults()
 
+    #want to output a file? just enter y
     if  input('Enter "y" if you want to create an output file: ') == 'y':
         results = open('results_'+setname+'.txt', 'w')
         
@@ -107,5 +114,6 @@ while True:
             )
         results.close()
     else:
+        #let the magic begin again
         pass
     print('='*50)
