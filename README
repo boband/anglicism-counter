@@ -2,6 +2,13 @@
 anglicism-counter by boband
 A python script to count anglicisms in German texts.
 
+# FILES #
+ - LICENSE
+ - README
+ - anglicism.counter.py
+ - anglicisms.txt (a list of all anglicisms)
+ - frequents.txt (a list of the most frequent words in German in order to minimize false positives)
+
 # LICENSE #
 This project is published under the MIT-License
 
