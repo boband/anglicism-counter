@@ -51,8 +51,8 @@ while True:
     
     #setting values
     lines, blanklines, sentences, words, setnum = 0,0,0,0,1
-    listOfAnglicisms = open('anglicisms.txt').read().split()
-    listOfGermanWords = open('frequents.txt').read().split()
+    listOfAnglicisms = open('lists/anglicisms.txt').read().split()
+    listOfGermanWords = open('lists/frequents.txt').read().split()
     anglicisms = []
     falsepositive = []
     setname = input('Please enter setname: ')
