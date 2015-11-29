@@ -1,7 +1,7 @@
 '''
 The MIT License (MIT)
 
-Copyright (c) 2015 boband (github.com/boband)
+Copyright (c) 2015 stendarr (github.com/stendarr)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ def derivatesFromAnglicism(word):
 
 #welcome message
 print('='*68)
-print(' Welcome to the ANGLICISM COUNTER by boband (see github.com/boband) ')
+print(' Welcome to the ANGLICISM COUNTER by stendarr (see github.com/stendarr) ')
 print('='*68)
 
 #start program in loop
