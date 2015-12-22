@@ -27,7 +27,7 @@ from collections import Counter
 import os.path
 
 #definitions
-def printResults()
+def printResults():
     print('='*50)
     print('Lines                 : ',lines)
     print('Blanklines            : ',blanklines)
