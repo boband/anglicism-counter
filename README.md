@@ -5,7 +5,7 @@ The anglicism-counter is a script I have created in order to analyze the frequen
 Files
 -----
  - LICENSE
- - README
+ - README.md
  - anglicism-counter.py
  - anglicisms.txt (a list of all anglicisms)
  - frequents.txt (a list of the most frequent words in German to minimize false positives)
