@@ -17,10 +17,12 @@ This project is published under the MIT-License, see the file LICENSE for furthe
 Usage
 =====
 Copy the text(s) you want to analyze to the folder where the program is located in this format:
+```
 <text1.txt>
 <text2.txt>
 <text3.txt>
 ...
+```
 Then enter the setname of the texts (in this example "text") when prompted.
 
 The program will then analyze all of the texts and output the total count of lines, blank lines, sentences, words, and anglicisms).
