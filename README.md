@@ -7,8 +7,8 @@ Files
  - LICENSE
  - README.md
  - anglicism-counter.py
- - anglicisms.txt (a list of all anglicisms)
- - frequents.txt (a list of the most frequent words in German to minimize false positives)
+ - lists/anglicisms.txt (a list of all anglicisms)
+ - lists/frequents.txt (a list of the most frequent words in German to minimize false positives)
 
 License
 =======
